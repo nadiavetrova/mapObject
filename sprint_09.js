@@ -150,6 +150,12 @@ document.querySelector('.b-8').addEventListener('click', t08);
 let m9 = new Map([['k1', 22], ['k2', 33]]);
 
 const t09 = () => {
+  const out9 = document.querySelector('.out-9');
+  let result = '';
+  for (let item of m9.keys()) {
+    result += m9.get(item) + ' ';
+  }
+  out9.textContent = result;
 }
 
 document.querySelector('.b-9').addEventListener('click', t09);
