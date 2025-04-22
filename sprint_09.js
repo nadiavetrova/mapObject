@@ -53,7 +53,14 @@ document.querySelector('.b-3').addEventListener('click', t03);
 let m4 = new Map([['one', 1], ['two', 2], ['three', 3], ['four', 4]]);
 
 const t04 = () => {
+  const i4 = document.querySelector('input.i-4');
+  if (m4.has(i4.value)) {
+    m4.delete(i4.value);
+  }
+  console.log(m4);
 }
+
+
 
 document.querySelector('.b-4').addEventListener('click', t04);
 
