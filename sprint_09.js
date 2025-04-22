@@ -5,10 +5,12 @@
 // По нажатию кнопки запускается функция, которая создает пустой Map и возвращает его.
 
 const t01 = () => {
+  const m = new Map();
+  return m;
 }
 
 document.querySelector('.b-1').addEventListener('click', () => {
-    console.log(t01());
+  console.log(t01());
 });
 
 
@@ -18,6 +20,12 @@ document.querySelector('.b-1').addEventListener('click', () => {
 let m2 = new Map();
 
 const t02 = () => {
+  const i21 = document.querySelector('input.i-21');
+  const i22 = document.querySelector('input.i-22');
+
+  m2.set(i21.value, i22.value);
+  console.log(m2);
+
 }
 
 document.querySelector('.b-2').addEventListener('click', t02);
@@ -105,22 +113,22 @@ document.querySelector('.b-9').addEventListener('click', t09);
 // Давайте убедимся, что Map очень полезная штука. Изучите как выводится объект obj10 и map m10.
 
 let obj10 = {
-    'Robocop': 1987,
-    'Predator': 1987,
-     9 :2000
+  'Robocop': 1987,
+  'Predator': 1987,
+  9: 2000
 }
 
-let m10 = new Map([['Robocop',1987],['Predator',1987],[9, 2000]]);
+let m10 = new Map([['Robocop', 1987], ['Predator', 1987], [9, 2000]]);
 
 const t10 = () => {
-    console.clear();
-    console.log('Object:');
-    console.log(obj10);
-    for (let key in obj10) console.log(key);
-    
-    console.log('Map:');
-    console.log(m10);
-    for (let k of m10.keys()) console.log(k);
+  console.clear();
+  console.log('Object:');
+  console.log(obj10);
+  for (let key in obj10) console.log(key);
+
+  console.log('Map:');
+  console.log(m10);
+  for (let k of m10.keys()) console.log(k);
 }
 
 document.querySelector('.b-10').addEventListener('click', t10);
