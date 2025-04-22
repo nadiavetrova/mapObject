@@ -37,6 +37,11 @@ document.querySelector('.b-2').addEventListener('click', t02);
 let m3 = new Map([['one', 1], ['two', 2], ['three', 3], ['four', 4]]);
 
 const t03 = () => {
+  const i3 = document.querySelector('input.i-3');
+  const out3 = document.querySelector('.out-3');
+
+  out3.textContent = m3.has(i3.value);
+
 }
 
 document.querySelector('.b-3').addEventListener('click', t03);
