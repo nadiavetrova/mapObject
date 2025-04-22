@@ -72,7 +72,6 @@ document.querySelector('.b-4').addEventListener('click', t04);
 const t05 = () => {
   m4.clear();
   console.log(m4);
-
 }
 
 document.querySelector('.b-5').addEventListener('click', t05);
@@ -85,7 +84,20 @@ document.querySelector('.b-5').addEventListener('click', t05);
 let m6 = new Map();
 
 const t06 = () => {
-}
+  const s61 = document.querySelector('.s61').value;
+  const s62 = document.querySelector('.s62').value;
+  const s63 = document.querySelector('.s63').value;
+  let key;
+  if (s62 === 'number') {
+    key = Number(s61);
+  } else if (s62 === 'boolean') {
+    key = s61.toLowerCase() === 'true';
+  } else {
+    key = s61;
+  }
+  m6.set(key, s63);
+  console.log(m6);
+};
 
 document.querySelector('.b-6').addEventListener('click', t06);
 
@@ -96,6 +108,20 @@ document.querySelector('.b-6').addEventListener('click', t06);
 let m7 = new Map();
 
 const t07 = () => {
+  const s71 = document.querySelector('.s71').value;
+  const s72 = document.querySelector('.s72').value;
+  const s73 = document.querySelector('.s73').value;
+
+  let key = s71;
+  if (s72 === 'uc') {
+    key = s71.toUpperCase();
+  } else if (s72 === 'lc') {
+    key = s71.toLowerCase();
+  }
+
+  m7.set(key, s73);
+
+  console.log(m7);
 }
 
 document.querySelector('.b-7').addEventListener('click', t07);
