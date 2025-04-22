@@ -133,6 +133,12 @@ document.querySelector('.b-7').addEventListener('click', t07);
 let m8 = new Map([['k1', 22], ['k2', 33]]);
 
 const t08 = () => {
+  const out8 = document.querySelector('.out-8');
+  let result = '';
+  for (let item of m8.keys()) {
+    result += item + ' ';
+  }
+  out8.textContent = result;
 }
 
 document.querySelector('.b-8').addEventListener('click', t08);
