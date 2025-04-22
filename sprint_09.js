@@ -70,6 +70,9 @@ document.querySelector('.b-4').addEventListener('click', t04);
 
 
 const t05 = () => {
+  m4.clear();
+  console.log(m4);
+
 }
 
 document.querySelector('.b-5').addEventListener('click', t05);
